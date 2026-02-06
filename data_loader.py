@@ -3,7 +3,29 @@ import os
 import streamlit as st
 import numpy as np
 
+import kagglehub
+import shutil
+
 DATA_DIR = "data"
+
+# Check if data exists, if not download it (for Streamlit Cloud)
+if not os.path.exists(DATA_DIR):
+    try:
+        print("Data directory not found. Downloading from Kaggle...")
+        path = kagglehub.dataset_download("ryanluong1/valorant-champion-tour-2021-2023-data")
+        # kagglehub downloads to a cache dir, we need to move or symlink, or just point DATA_DIR there
+        # For simplicity in this app structure, let's copy/move content to 'data'
+        # Actually, simpler: Update DATA_DIR to point to the download path
+        # But our code expects 'vct_2021' inside DATA_DIR. The download usually contains these folders.
+        
+        # Let's try to copy it to local 'data' so standard logic works
+        print(f"Dataset downloaded to: {path}")
+        shutil.copytree(path, DATA_DIR, dirs_exist_ok=True)
+        print("Data moved to local directory.")
+        
+    except Exception as e:
+        st.error(f"Failed to download data: {e}")
+
 YEARS = ["vct_2021", "vct_2022", "vct_2023", "vct_2024", "vct_2025"]
 
 @st.cache_data(show_spinner=False)
