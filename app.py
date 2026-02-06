@@ -1,6 +1,6 @@
 import streamlit as st
 from utils import setup_page_config
-from views import overview, players, teams, agents, maps, history
+from views import overview, players, teams, agents, maps, history, h2h
 
 # --- App Setup ---
 setup_page_config(page_title="VCT 2021-2025 Analytics")
@@ -15,6 +15,7 @@ page = st.sidebar.radio("Navigation", [
     "Teams", 
     "Agents", 
     "Maps", 
+    "Head-to-Head",
     "History"
 ], index=0)
 
@@ -32,6 +33,8 @@ elif page == "Agents":
     agents.show_agents()
 elif page == "Maps":
     maps.show_maps()
+elif page == "Head-to-Head":
+    h2h.show_h2h()
 elif page == "History":
     history.show_history()
     

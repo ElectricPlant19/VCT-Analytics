@@ -56,24 +56,26 @@ def apply_custom_css():
             background: linear-gradient(135deg, var(--bg-secondary), var(--bg-elevated));
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 20px;
+            padding: 24px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
         }
         div[data-testid="metric-container"]:hover {
             transform: translateY(-4px);
             border-color: var(--val-red);
-            box-shadow: 0 8px 20px rgba(255, 70, 85, 0.15);
+            box-shadow: 0 8px 24px rgba(255, 70, 85, 0.2);
         }
         div[data-testid="metric-container"] label {
             font-family: 'Inter', sans-serif;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         div[data-testid="metric-container"] div[data-testid="stMetricValue"] {
             font-family: 'JetBrains Mono', monospace;
             color: var(--text-primary);
-            font-size: 2rem !important;
+            font-size: 2.5rem !important;
             font-weight: 700;
         }
         
