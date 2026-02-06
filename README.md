@@ -2,7 +2,7 @@
 
 A professional-grade esports analytics dashboard for the **Valorant Champions Tour**, built with **Streamlit** and **Plotly**. This application visualizes over 1.1 million records of match data to provide deep insights for analysts, coaches, and competitive fans.
 
-🔗 **Live Demo**: [Deploy on Streamlit Cloud](https://share.streamlit.io/)
+🔗 **Live Demo**: [Deploy on Streamlit Cloud](https://vct-analytics-apascdr5fkh7mxwzufyrgu.streamlit.app/)
 
 ![VCT Dashboard Preview](https://via.placeholder.com/800x400?text=Premium+Esports+Analytics+UI)
 
