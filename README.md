@@ -4,7 +4,7 @@ A professional-grade esports analytics dashboard for the **Valorant Champions To
 
 🔗 **Live Demo**: [Deploy on Streamlit Cloud](https://vct-analytics-apascdr5fkh7mxwzufyrgu.streamlit.app/)
 
-![VCT Dashboard Preview](https://via.placeholder.com/800x400?text=Premium+Esports+Analytics+UI)
+
 
 ## ✨ Key Features
 
